@@ -1,0 +1,36 @@
+.check-page {
+  background-color: #f1f3f4;
+  border: 1px solid #f1f3f4;
+  margin-top: 0;
+}
+.card-summary {
+  background-color: #107895;
+  text-align: center;
+}
+.cart-btn {
+  background-color: #ffcc66;
+  color: #107895;
+  border-radius: 35px;
+  width: 100%;
+}
+.summary {
+  font-size: 2rem;
+}
+.cart-head {
+  font-size: 1rem;
+  cursor: pointer;
+}
+.cart-head-2 {
+  color: #107895;
+  font-size: 30px;
+  padding-bottom: 25px;
+}
+.fa-trash:before {
+  content: none;
+}
+
+@media (min-width: 1025px) {
+  .h-custom {
+    height: 100vh !important;
+  }
+}

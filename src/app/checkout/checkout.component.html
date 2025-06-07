@@ -1,0 +1,74 @@
+<section class="h-100 h-custom">
+    <div class="container py-5 h-100">
+        <div class=" row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <div class="card check-page">
+                    <div class="card-body p-4">
+
+                        <div class="row">
+
+                            <div class="col-lg-7">
+                                <h5 class="mb-3 cart-head"><span routerLink="/cart-page" class="text-body"><fa-icon
+                                            [icon]="faLeftLong" class="fas fa-long-arrow-alt-left ms-2 "></fa-icon>
+                                        Cart Page</span>
+                                </h5>
+                                <hr>
+                                <h5 class="mb-3 cart-head-2"><span routerLink="" class="text-body">
+                                        Shipping Address</span>
+                                </h5>
+
+                                <form #orderData="ngForm" class="common-form" (ngSubmit)="orderNow(orderData.value)">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Enter your email</mat-label>
+                                        <input matInput class="form-input" type="text" placeholder="pat@example.com"
+                                            name="email" ngModel />
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Enter your address</mat-label>
+                                        <input matInput class="form-input" type="text" placeholder="Enter your address"
+                                            name="address" ngModel />
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Enter your contact</mat-label>
+                                        <input matInput class="form-input" type="tel"
+                                            placeholder="Enter your contact detail" name="contact" ngModel />
+                                    </mat-form-field>
+                                    <button class="button">Order Now</button>
+                                </form>
+
+                            </div>
+                            <div class="col-lg-5">
+
+                                <div class="card card-summary text-white mt-5">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                            <h1 class="mb-0 summary">Checkout</h1>
+                                        </div>
+
+                                        <hr class="my-4">
+
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-2">Amount :</p>
+                                            <p class="mb-2">{{totalPrice | currency:'INR'}}</p>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-2">Payment Method :</p>
+                                            <p class="mb-2">Pay on Delivery</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

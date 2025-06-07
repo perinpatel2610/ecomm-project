@@ -1,0 +1,244 @@
+{
+  "seller": [
+    {
+      "name": "Perin Patel",
+      "email": "perin@seller.com",
+      "password": "abc@123",
+      "id": 1
+    },
+    {
+      "name": "Harshil Patel",
+      "email": "harshil@seller.com",
+      "password": "abc@123",
+      "id": 2
+    },
+    {
+      "name": "tony",
+      "password": "abc@123",
+      "email": "tony@test.com",
+      "id": 3
+    },
+    {
+      "name": "petter",
+      "password": "abc@123",
+      "email": "petter@test.com",
+      "id": 4
+    },
+    {
+      "name": "alena",
+      "password": "alena123",
+      "email": "alena@test.com",
+      "id": 5
+    },
+    {
+      "name": "jay",
+      "password": "jay123",
+      "email": "jay@test.com",
+      "id": 6
+    },
+    {
+      "name": "rayan",
+      "password": "123",
+      "email": "rayan@test.com",
+      "id": 7
+    },
+    {
+      "name": "sparsh",
+      "email": "sparsh@seller.com",
+      "password": "abc@123",
+      "id": 8
+    }
+  ],
+  "products": [
+    {
+      "name": "samsung s21 Pro",
+      "price": "75000",
+      "color": "white",
+      "category": "mobile",
+      "description": "good phone",
+      "image": "https://m.media-amazon.com/images/I/61UDrA6RtTL._AC_SL1500_.jpg",
+      "id": 1
+    },
+    {
+      "name": "iphone 14",
+      "price": "100000",
+      "color": "black",
+      "category": "mobile",
+      "description": "very nice",
+      "image": "https://www.reliancedigital.in/medias/Apple-14-smart-Phones-493665804-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w4MjM1OXxpbWFnZS9qcGVnfGltYWdlcy9oODgvaGMzLzk5NjkzMDczMjAzNTAuanBnfGQ3NzIzMDI1OGU4NWE2ZjExZDgyYmRkZDVhNGExNjJhMmQzNDM1MWYzZDk2MWRmMDMzYjIwNTFiOWMyZTJlYTg",
+      "id": 2
+    },
+    {
+      "name": "Hp Laptop",
+      "price": "85000",
+      "color": "white",
+      "category": "leptop",
+      "description": "very good",
+      "image": "https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/c/0/c08644067.png",
+      "id": 3
+    },
+    {
+      "name": "Nike Shoes",
+      "price": "15500",
+      "color": "Purple",
+      "category": "Shoes",
+      "description": "best shoes for running",
+      "image": "https://media.gettyimages.com/id/506922838/photo/nike-pegasus-design-shoes-and-logo.jpg?s=1024x1024&w=gi&k=20&c=SrmvmTsnYG2TNu2ZsYGxr5q6fymWIK0mWtQABWQ60U0=",
+      "id": 4
+    },
+    {
+      "name": "Nike Shoes",
+      "price": "13500",
+      "color": "Yellow",
+      "category": "Shoes",
+      "description": "Best Shoes for running",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a1417b64-5279-4e04-a010-0a5c5e504d05/air-jordan-1-zoom-cmft-2-shoes-nX8Qqx.png",
+      "id": 5
+    },
+    {
+      "name": "Apple Watch Ultra",
+      "price": "85000",
+      "color": "orange",
+      "category": "watch",
+      "description": "FANTASTIC WATCH ",
+      "image": "https://m.media-amazon.com/images/I/51XGrwhczrL._SX300_SY300_QL70_FMwebp_.jpg",
+      "id": 6
+    },
+    {
+      "name": "aPPLE i pad pro ",
+      "price": "70000",
+      "color": "black",
+      "category": "i pod",
+      "description": "good for student",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-pro-model-select-gallery-2-202212?wid=2560&hei=1440&fmt=p-jpg&qlt=95&.v=1667594167534",
+      "id": 7
+    },
+    {
+      "name": "Samsung Galaxy Watch4",
+      "price": "10000",
+      "color": "black",
+      "category": "watch",
+      "description": "best watch ",
+      "image": "https://m.media-amazon.com/images/I/61nBzBREzGL._SL1500_.jpg",
+      "id": 8
+    },
+    {
+      "name": "apple macbook air",
+      "price": "100000",
+      "color": "silver",
+      "category": "leptop",
+      "description": "Best Prossesor",
+      "image": "https://m.media-amazon.com/images/I/710TJuHTMhL._SL1500_.jpg",
+      "id": 9
+    },
+    {
+      "name": "Canon R5",
+      "price": "315000",
+      "color": "Black",
+      "category": "Camera",
+      "description": "good camera",
+      "image": "https://i1.adis.ws/i/canon/eos-r5_front_rf24-105mmf4lisusm_32c26ad194234d42b3cd9e582a21c99b?$prod-gallery-1by1$",
+      "id": 10
+    }
+  ],
+  "users": [
+    {
+      "name": "anil",
+      "email": "anil@test.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "name": "petter",
+      "email": "petter@test.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "tony",
+      "email": "tony@test.com",
+      "password": "abc@123",
+      "id": 3
+    },
+    {
+      "name": "perin",
+      "email": "perin@test.com",
+      "password": "abc@123",
+      "id": 4
+    },
+    {
+      "name": "patel",
+      "email": "patel@test.com",
+      "password": "abc@123",
+      "id": 5
+    },
+    {
+      "name": "jenny",
+      "email": "jenny@test.com",
+      "password": "abc@123",
+      "id": 6
+    },
+    {
+      "name": "vinay",
+      "email": "vinay@test.com",
+      "password": "abc123",
+      "id": 7
+    }
+  ],
+  "cart": [
+    {
+      "name": "Nike Shoes",
+      "price": "13500",
+      "color": "Yellow",
+      "category": "Shoes",
+      "description": "Best Shoes for running",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a1417b64-5279-4e04-a010-0a5c5e504d05/air-jordan-1-zoom-cmft-2-shoes-nX8Qqx.png",
+      "quantity": 1,
+      "productId": 5,
+      "userId": 4,
+      "id": 12
+    },
+    {
+      "name": "aPPLE i pad pro ",
+      "price": "70000",
+      "color": "black",
+      "category": "i pod",
+      "description": "good for student",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-pro-model-select-gallery-2-202212?wid=2560&hei=1440&fmt=p-jpg&qlt=95&.v=1667594167534",
+      "quantity": 1,
+      "productId": 7,
+      "userId": 4,
+      "id": 13
+    },
+    {
+      "name": "Hp Laptop",
+      "price": "85000",
+      "color": "white",
+      "category": "leptop",
+      "description": "very good",
+      "image": "https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/c/0/c08644067.png",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 4,
+      "id": 14
+    }
+  ],
+  "orders": [
+    {
+      "email": "wdwc",
+      "address": "cw",
+      "contact": "8585",
+      "totalPrice": 175100,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "email": "perin@test.com",
+      "address": "lunawada ",
+      "contact": "9797",
+      "totalPrice": 75100,
+      "userId": 4,
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+table {
+  width: 100%;
+  border: 1px solid #d1d3d3;
+  color: #303537;
+  background-color: #f1f3f4;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #d1d3d3;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.p-name {
+  color: #107895;
+  /* display: flex;
+  justify-content: space-evenly;
+  vertical-align: middle; */
+}
+.p-name a {
+  padding-left: 15px;
+  color: #107895;
+}

@@ -1,0 +1,16 @@
+h1 {
+  color: #063a5b;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .add-product {
+    background-color: #f1f3f4;
+    margin: auto;
+    height: 550px;
+    width: 500px;
+    margin-top: 60px;
+  }
+}

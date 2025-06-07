@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="mx-4">
+    <h1 class="text-center mt-4 mb-4 fs-1">All Product List</h1>
+    <div style="overflow-x:auto;">
+        <table>
+            <tr>
+                <th><b>Image</b></th>
+                <th><b>Name</b></th>
+                <th><b>Price</b></th>
+                <th><b>Color</b></th>
+                <th><b>Category</b></th>
+                <th><b>Description</b></th>
+                <th><b>Action</b></th>
+            </tr>
+            <tr *ngFor="let item of productList">
+                <td><img src="{{item.image}}"></td>
+                <td class="p-name">{{item.name | uppercase}}</td>
+                <td>{{item.price | currency: 'INR'}}</td>
+                <td>{{item.color | titlecase}}</td>
+                <td>{{item.category | titlecase}}</td>
+                <td>{{item.description | titlecase}}</td>
+                <td class="p-name">
+                    <fa-icon (click)="deleteProduct(item.id)" [icon]="icon"></fa-icon>
+                    <a  routerLink="/seller-update-product/{{item.id}}"> <fa-icon
+                            [icon]="editicon"></fa-icon> </a>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+
+</html>

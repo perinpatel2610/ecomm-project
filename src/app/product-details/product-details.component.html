@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Product Card/Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <div class="card-wrapper" *ngIf="productData">
+        <div class="card">
+            <!-- card left -->
+            <div class="product-imgs">
+                <div class="img-display">
+                    <div class="img-showcase">
+                        <img class="product-image" alt="Responsive image" src="{{productData.image}}">
+                    </div>
+                </div>
+            </div>
+            <!-- card right -->
+            <div class="product-content">
+                <h2 class="product-title">{{productData.name | titlecase}}</h2>
+                <div class="product-price">
+                    <p class="new-price">Price: <span>{{productData.price | currency:'INR'}}</span></p>
+                </div>
+
+                <div class="product-detail">
+                    <h2>about this item: </h2>
+                    <ul>
+                        <li>Color: <span> {{productData.color | titlecase}}</span> </li>
+                        <li>Category: <span>{{productData.category | titlecase}}</span></li>
+                        <li>Shipping Area: <span>All over the world</span></li>
+                        <li>Delivery Fee: <span>{{100 | currency:'INR'}}</span></li>
+                    </ul>
+                </div>
+
+                <div class="purchase-info">
+                    <div class="quantity-group">
+                        <button class="quantity-btn " (click)="handleQuantity('min')">-</button>
+                        <input class="quantity-input" type="text" value="{{productQuantity}}">
+                        <button class="quantity-btn" (click)="handleQuantity('plus')">+</button>
+                    </div>
+                    <button *ngIf="!removeCart" type="button" class="btn" (click)="addToCart()">
+                        Add to Cart <i class=" fas fa-shopping-cart"></i>
+                    </button>
+                    <button *ngIf="removeCart" type="button" class="btn" (click)="removeToCart(productData.id)">
+                        Remove to Cart <i class=" fas fa-shopping-cart"></i>
+                    </button>
+                    <button type="button" class="btn buy" (click)="buyNow()">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

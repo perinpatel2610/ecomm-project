@@ -1,0 +1,57 @@
+.sign-up,
+.login {
+    text-align: center;
+}
+
+.sign-up h1,
+.login h1 {
+    margin-bottom: 50px;
+    margin-top: 5px;
+    color: #063A5B;
+    cursor: pointer;
+}
+
+.auth-toggle-link {
+    color: #e0361f;
+    cursor: pointer;
+    text-decoration: none;
+}
+.create-acc{
+    padding-top: 10px;
+}
+.invalid-input {
+    color: #e0361f;
+    font-size: 12px;
+    margin-top: -20px;
+    text-align: left;
+  }
+     
+.create-acc{
+    padding-top: 10px;
+    color: #2E3335;
+}
+.pwd-icon{
+    color: #107895;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+
+
+
+@media screen and (min-width: 992px) {
+    .card{
+        border: 1px solid  rgba(255,255,255,0.06);
+        background-color: #F1F3F4;
+        margin: auto;
+        inset: 0;
+        border-radius:5px;
+        height:500px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        backdrop-filter: blur(20px);
+        box-shadow: 20px 20px 22 px rgba(0,0,0,0.2);
+        color: #fcfcfc;
+    }  
+  }

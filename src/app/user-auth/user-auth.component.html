@@ -1,0 +1,81 @@
+<div class="card">
+  <div class="user-auth">
+    <div *ngIf="!showLogin" class="user-signup">
+      <h1>User Sign-up</h1>
+      <form class="common-form" #userSignUp="ngForm" (ngSubmit)="signUp(userSignUp.value)">
+
+        <!-- name  -->
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your name</mat-label>
+          <input matInput placeholder="Enter your name" type="text" name="name" ngModel #name="ngModel" required
+            name />
+        </mat-form-field>
+        <p class="invalid-input">
+          <span *ngIf="name.touched"><b>Please Enter Name</b></span>
+        </p>
+
+        <!-- email  -->
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" type="text" name="email" ngModel #email="ngModel" required
+            email />
+        </mat-form-field>
+        <p class="invalid-input">
+          <span *ngIf="email.invalid && email.touched"><b>Please Enter Valid Email</b></span>
+        </p>
+
+        <!-- Password: -->
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your Password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" name="password" placeholder="Enter your Password" ngModel #password="ngModel"
+            required minlength="2" maxlength="20" />
+          <p mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide" class="pwd-icon">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </p>
+        </mat-form-field>
+        <p class="invalid-input">
+          <span *ngIf="password.invalid && password.touched"><b>Please Enter Valid Password </b></span>
+        </p>
+        <button [disabled]="userSignUp.invalid" class="button">Sign Up</button>
+        <p class="create-acc">
+          Already Have Account ? <a (click)="openLogin()"><b> Click Here </b></a>
+        </p>
+      </form>
+    </div>
+    <div *ngIf="showLogin" class="user-login">
+      <h1>User Login</h1>
+      <form class="common-form" #userLogin="ngForm" (ngSubmit)="login(userLogin.value)">
+        <p class="error-p">{{ authError }}</p>
+
+        <!-- email  -->
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your email</mat-label>
+          <input matInput class="in" placeholder="pat@example.com" type="text" name="email" ngModel #email="ngModel" required
+            email />
+        </mat-form-field>
+        <p class="invalid-input">
+          <span *ngIf="email.invalid && email.touched"><b>Please Enter Valid Email</b></span>
+        </p>
+        <!-- password   -->
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your Password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" name="password" placeholder="Enter User Password" ngModel #password="ngModel"
+            required minlength="2" maxlength="20" />
+          <p mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide" class="pwd-icon">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </p>
+        </mat-form-field>
+        <p class="invalid-input">
+          <span *ngIf="password.invalid && password.touched"><b>Please Enter Valid Password </b></span>
+        </p>
+
+        <button [disabled]="userLogin.invalid" class="button">Login</button>
+        <p class="create-acc">
+          Want to Create Account ? <a (click)="openSignUp()"><b>Click Here</b></a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

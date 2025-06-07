@@ -1,0 +1,104 @@
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="">Shopping</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" (click)="isCollapsed = !isCollapsed"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <!-- search bar  -->
+        <div *ngIf="menuType!=='seller'" class="collapse navbar-collapse " id="navbarSupportedContent">
+
+            <form class="d-flex flex-row search">
+                <input class="form-control me-2" type="search" #searchInput (keyup)="searchProduct($event)"
+                    (blur)="hideSearch()" placeholder="Search Products" aria-label="Search">
+                <button class="btn  icon-button" (click)="submitSearch(searchInput.value)"><i
+                        class="fa fa-search"></i></button>
+                <ul class="suggested-search" *ngIf="searchResult">
+                    <li *ngFor="let item of searchResult">
+                        <a (mousedown)="redirectToDetails(item.id)">
+                            {{item.name | titlecase}}</a>
+                    </li>
+                </ul>
+            </form>
+
+        </div>
+
+        <div [ngSwitch]="menuType" class="collapse navbar-collapse nav-menu" id="navbarSupportedContent"
+            [ngbCollapse]="isCollapsed">
+
+            <!-- default  -->
+            <ul *ngSwitchCase="'default'" class="navbar-nav ms-auto ">
+                <li class="nav-item"><a routerLink="seller-auth" class=" nav-link hover-underline-animation"
+                        aria-current="page">Seller</a></li>
+                <li class="nav-item"><a routerLink="" class=" nav-link hover-underline-animation"
+                        aria-current="page">Home</a></li>
+                <li class="nav-item"><a routerLink="/user-auth" class=" nav-link hover-underline-animation"
+                        aria-current="page">Login / Sign-up</a></li>
+                <ul class="navbar-nav flex-row justify-content-end flex-wrap align-items-center mr-lg-4 mr-xl-0">
+                    <li class="nav-item px-3 text-uppercase mb-0 position-relative d-lg-flex">
+                        <div id="cart" class="d-none">
+                        </div>
+                        <a routerLink="/user-auth" class="cart position-relative d-inline-flex"
+                            aria-label="View your shopping cart">
+                            <i class="fas fa fa-shopping-cart fa-lg"></i>
+                            <span
+                                class="cart-basket d-flex align-items-center justify-content-center">{{cartItems}}</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </ul>
+
+            <!-- user  -->
+            <ul *ngSwitchCase="'user'" class="navbar-nav ms-auto  ">
+                <li class="nav-item"><a routerLink="seller-auth" class=" nav-link hover-underline-animation"
+                        aria-current="page">Seller</a></li>
+                <li class="nav-item"><a routerLink="" class=" nav-link hover-underline-animation"
+                        aria-current="page">Home</a></li>
+                <li class="nav-item"><a routerLink="/user-auth" class=" nav-link hover-underline-animation"
+                        aria-current="page"><fa-icon [icon]="faUser" class="icon-user"></fa-icon>-{{userName |
+                        titlecase}}</a></li>
+                <li class="nav-item"><a routerLink="/my-orders" class="nav-link hover-underline-animation">My
+                        Order</a>
+                </li>
+                <li class="nav-item"><a (click)="userLogout()" class="nav-link  hover-underline-animation">Logout</a>
+                </li>
+                <ul class="navbar-nav flex-row justify-content-end flex-wrap align-items-center mr-lg-4 mr-xl-0">
+                    <li class="nav-item px-3 text-uppercase mb-0 position-relative d-lg-flex">
+                        <div id="cart" class="d-none">
+                        </div>
+                        <a [routerLink]="cartItems>0?'cart-page':null" class="cart position-relative d-inline-flex"
+                            aria-label="View your shopping cart">
+                            <i class="fas fa fa-shopping-cart fa-lg"></i>
+                            <span
+                                class="cart-basket d-flex align-items-center justify-content-center">{{cartItems}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+
+            <!-- seller  -->
+            <ul *ngSwitchCase="'seller'" class="navbar-nav ms-auto">
+                <li class="nav-item"><a routerLink="seller-add-product" class="nav-link hover-underline-animation">Add
+                        Product</a></li>
+                <li class="nav-item"><a routerLink="seller-home" class="nav-link hover-underline-animation">Product
+                        List</a></li>
+                <li class="nav-item"><a (click)="logout()" class="nav-link hover-underline-animation">Logout</a>
+                </li>
+                <li class="nav-item"><a class="nav-link hover-underline-animation">{{sellerName | titlecase}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</nav>

@@ -1,0 +1,70 @@
+<div class="card">
+    <div class="seller-auth">
+        <div *ngIf="!showLogin" class="sign-up">
+            <h1>Seller Sign-Up</h1>
+            <form #sellerSignup="ngForm" (ngSubmit)="signUp(sellerSignup.value)" class="common-form">
+
+                <!-- name  -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your name</mat-label>
+                    <input matInput type="text" ngModel name="name" placeholder="Enter Name">
+                </mat-form-field>
+                <!-- email  -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput type="email" ngModel name="email" placeholder="Enter Email">
+                </mat-form-field>
+                <!-- password  -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" ngModel name="password"
+                        placeholder="Enter Password" #password="ngModel" required minlength="2" maxlength="20">
+                    <p mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide" class="pwd-icon">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </p>
+                </mat-form-field>
+                <!-- button  -->
+                <button class="button">SignUp</button>
+                <p class="create-acc">Already have Account ?<a class="auth-toggle-link" (click)="openLogin()"><b> Click
+                            Here </b></a></p>
+            </form>
+        </div>
+
+        <!-- Login Area -->
+
+        <div *ngIf="showLogin" class="login">
+            <h1>Seller Login</h1>
+            <p class="error-p">{{authError}}</p>
+            <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)" class="common-form">
+                <!-- email  -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your Email</mat-label>
+                    <input matInput type="email" ngModel name="email" placeholder="Enter Email" #email="ngModel"
+                        required email />
+                </mat-form-field>
+                <p class="invalid-input">
+                    <span *ngIf="email.invalid && email.touched">Please Enter Valid Email</span>
+                </p>
+                <!-- password  -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your Password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" ngModel name="password"
+                        placeholder="Enter Password" #password="ngModel" required minlength="2" maxlength="20">
+                    <p mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide" class="pwd-icon">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </p>
+                </mat-form-field>
+                <p class="invalid-input">
+                    <span *ngIf="password.invalid && password.touched">Please Enter Valid Password</span>
+                </p>
+                <!-- button  -->
+                <button [disabled]="sellerLogin.invalid" class="button">Login</button>
+                <p class="create-acc">Want to Create Account ?<a class="auth-toggle-link" (click)="openSignUp()"><b>
+                            Click Here </b></a></p>
+            </form>
+        </div>
+
+    </div>
+</div>
