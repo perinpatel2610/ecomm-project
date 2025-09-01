@@ -1,31 +1,73 @@
-<<<<<<< HEAD
-# EcommProject
+# EcommProject 🛒
+An **Angular-based single-page e-commerce web application** with core shopping features like product listing, cart, checkout, and route protection. Built with scalability and modularity in mind, this project demonstrates proficiency in **Angular, TypeScript, JSON Server, and responsive UI design**.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+---
 
-## Development server
+## 🚀 Features
+- **Product Management** – Dynamic product listing with mock backend (JSON Server).
+- **Shopping Cart** – Add, remove, and update product quantities.
+- **Checkout Workflow** – Order summary, form validation, and purchase confirmation.
+- **Auth Guards** – Route protection for secure user flows.
+- **Responsive UI** – Works seamlessly on desktop and mobile.
+- **Service-Oriented Architecture** – Angular services for data handling and state management.
+- **Testing** – Behavior-driven testing for cart and checkout workflows.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🛠️ Tech Stack
+- **Frontend:** Angular, TypeScript, JavaScript, HTML, CSS, Bootstrap
+- **Backend (Mock API):** JSON Server
+- **Version Control:** Git/GitHub
+- **Testing Tools:** Jasmine, Karma
+- **Others:** Postman (API validation), Agile workflow
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 📂 Project Structure
+```
+ecomm-project/
+│── src/
+│   ├── app/               # Angular components, services, guards
+│   ├── assets/            # Static files
+│   ├── environments/      # Environment configs
+│   └── index.html         # Main entry point
+│── db.json                # JSON Server mock backend
+│── package.json           # Dependencies & scripts
+└── README.md
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## ⚙️ Installation & Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/perinpatel2610/ecomm-project.git
+   cd ecomm-project
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Running end-to-end tests
+3. Run JSON Server (mock API):
+   ```bash
+   npx json-server --watch db.json
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. Start Angular dev server:
+   ```bash
+   ng serve
+   ```
 
-## Further help
+5. Open the app in browser:  
+   👉 [http://localhost:4200](http://localhost:4200)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
-# ecomm-project
->>>>>>> 758dda157ae17a9fef5a487839e1d78c78cc15ef
+---
+
+
+## 👨‍💻 Author
+**Perin Patel**  
+🔗 [LinkedIn](http://www.linkedin.com/in/perin-patel-783904209)  
+📧 perinpatel.ict18@gmail.com  
+
